@@ -9,6 +9,30 @@ repositories {
     mavenCentral()
 }
 
+test {
+    testLogging.showStandardStreams = true
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+
+    test {
+        groovy {
+            srcDir 'src/test/groovy'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
+
 dependencies {
 
     def gebVersion = "0.13.1"
